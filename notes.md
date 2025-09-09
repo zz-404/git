@@ -1,4 +1,9 @@
-1. wget 命令：互联网下载器
+# cd
+cd ~  回家  
+cd ~/digital-cousins 切换目录  
+cd .. 的意思就是：切换到当前目录的上一级目录。  
+
+# wget 命令：互联网下载器
 wget 是一个用于从网上下载文件的命令行工具。
 
 你可以把它想象成没有界面的浏览器或者像迅雷、IDM 这样的下载工具，但它是在终端里通过命令来工作的。
@@ -15,7 +20,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.5.0-0-Linux-x86_64.
 
 运行后，你会看到下载进度，完成后你的 digital-cousins 目录里就会多出一个 .sh 文件。
 
-2. bash 命令：脚本解释器 / 运行器
+# bash 命令：脚本解释器 / 运行器
 bash 是一种 Shell（命令解释器），也是它的命令名称。用它来执行一个文件，意思是“请把这个文件里的内容当作一系列命令来逐行执行”。
 
 什么是 Shell？ 就是你正在使用的这个黑色终端窗口，它负责理解你输入的命令（如 ls, cd），并调用系统真正的程序来执行。bash 是最流行的一种 Shell。
@@ -39,3 +44,14 @@ bash：相当于你自己拿起那份下载好的安装说明书，亲自阅读�
 
 所以，这两个命令是连续的关键步骤：先下载（wget），后执行（bash）。
 
+# mkdir -p deps && cd deps
+mkdir -p deps mkdir -p deps 的意思是：请确保有一个名为 deps 的目录存在。如果它不存在，就创建它；如果它已经存在，也不用提示错误。
+
+# install
+pip install -e 是一个非常重要且实用的 pip 安装命令。我们来详细分解它。
+pip install: 标准的 Python 包安装命令。
+-e: 是 --editable 选项的简写形式，意思是“可编辑的”。
+conda install -c <频道名称> <包名称>
+
+# which
+查找文件路径
