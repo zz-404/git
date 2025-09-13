@@ -20,6 +20,9 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.5.0-0-Linux-x86_64.
 
 运行后，你会看到下载进度，完成后你的 digital-cousins 目录里就会多出一个 .sh 文件。
 
+下载失败的话考虑本地下载后再上传服务器
+打开powershell后scp "C:\Users\张泽\Downloads\paramnet_360cities_edina_rpfpp.pth" zzybdgq@172.24.112.192:/home/zzybdgq/.cache/torch/hub/checkpoints/paramnet_360cities_edina_rpfpp.pth
+
 # bash 命令：脚本解释器 / 运行器
 bash 是一种 Shell（命令解释器），也是它的命令名称。用它来执行一个文件，意思是“请把这个文件里的内容当作一系列命令来逐行执行”。
 
@@ -55,3 +58,10 @@ conda install -c <频道名称> <包名称>
 
 # which
 查找文件路径
+
+# 配置代理
+export HTTP_PROXY=http://172.19.21.115:7078    
+export HTTPS_PROXY=http://172.19.21.115:7078  
+vpn要开全局代理  
+echo "HTTP_PROXY: $HTTP_PROXY"  
+echo "HTTPS_PROXY: $HTTPS_PROXY"  
