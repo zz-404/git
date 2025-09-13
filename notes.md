@@ -79,6 +79,7 @@ cd panda3d-survey     # 进入这个文件夹
 
 bash
 python -m venv venv
+python -m venv my_venv
 激活虚拟环境：
 
 bash
@@ -99,4 +100,10 @@ bash
 
 删除项目：如果你以后不想做这个项目了，直接整个删除 D:\MyProjects\panda3d-survey 文件夹，所有相关文件（代码、环境、安装的库）就都清理干净了，完全不会弄乱C盘。
 
+nptepad main.py 创建文件
+
+
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process  防止报错
+
+
+# -*- coding: utf-8 -*-
