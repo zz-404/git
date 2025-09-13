@@ -65,3 +65,38 @@ export HTTPS_PROXY=http://172.19.21.115:7078
 vpn要开全局代理  
 echo "HTTP_PROXY: $HTTP_PROXY"  
 echo "HTTPS_PROXY: $HTTPS_PROXY"  
+
+# python建立虚拟环境
+打开PowerShell，并切换到你想要的非C盘目录，比如D盘：
+
+bash
+D:  # 切换到D盘
+cd D:\MyProjects  # 进入你的项目文件夹（如果没有就新建一个）
+mkdir panda3d-survey  # 为你的调研项目创建一个新文件夹
+cd panda3d-survey     # 进入这个文件夹
+创建虚拟环境：
+这里的 venv 文件夹就是你的新环境，它会在当前目录（D:\MyProjects\panda3d-survey）下创建。
+
+bash
+python -m venv venv
+激活虚拟环境：
+
+bash
+.\venv\Scripts\Activate.ps1
+激活后，你的PowerShell命令行前面会出现一个 (venv) 标志，这表示你正工作在这个独立环境中。
+
+在虚拟环境中安装Panda3D：
+
+bash
+(venv) PS D:\MyProjects\panda3d-survey> pip install panda3d
+看！现在Panda3D就被安装到了 D:\MyProjects\panda3d-survey\venv 这个文件夹里，而不是你的C盘！
+
+未来如何管理：
+
+进入项目工作：每次要在这个项目下工作时，先进入 D:\MyProjects\panda3d-survey 目录，然后执行第3步（激活环境）。
+
+安装其他库：在 (venv) 环境下用 pip install，所有库都会装到D盘。
+
+删除项目：如果你以后不想做这个项目了，直接整个删除 D:\MyProjects\panda3d-survey 文件夹，所有相关文件（代码、环境、安装的库）就都清理干净了，完全不会弄乱C盘。
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process  防止报错
