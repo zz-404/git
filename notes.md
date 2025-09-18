@@ -83,6 +83,7 @@ python -m venv my_venv
 激活虚拟环境：
 
 bash
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 .\venv\Scripts\Activate.ps1
 激活后，你的PowerShell命令行前面会出现一个 (venv) 标志，这表示你正工作在这个独立环境中。
 
@@ -107,3 +108,10 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process  防止报错
 
 
 # -*- coding: utf-8 -*-
+
+
+打开 VS Code，确保已安装 "Remote - WSL" 扩展（如果没有，在扩展商店搜索安装）
+按下 Ctrl+Shift+P 打开命令面板，输入并选择：
+WSL: Connect to WSL using Distro
+选择你的 Ubuntu 子系统，VS Code 会自动新建一个连接到 WSL 的窗口
+在新窗口中，点击左侧 "资源管理器" 图标，再点击 "打开文件夹"，就能浏览并选择 Ubuntu 里的目录了
